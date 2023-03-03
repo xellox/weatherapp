@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #070707;
+
+}
+
+.card-content{
+    border:1px solid rgb(75, 75, 75);
+    padding: 2em;
+    font-size: 25px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0 black;
+}
+.searchbar{
+    margin-bottom: 20px;
+
+}
+
+.searchinput{
+    height: 43px;
+    width:300px;
+    font-size: 26px;
+    border-radius: 22px;
+    padding: 7px;
+    outline:none;
+    border:none;
+    background-color: rgba(14, 14, 14, 0.545);
+    color:white;
+}
+
+button{
+    height: 46px;
+    width: 46px;
+    border:none;
+    border-radius: 50%;
+    background-color: rgba(14, 14, 14, 0.545);
+    margin-left: 5px;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    display:inline-flex;
+}
+
+button:hover{
+    background-color: rgba(14, 14, 14, 0.36);
+}
+
+.degrees::after{
+    content: ' C°'
+}
