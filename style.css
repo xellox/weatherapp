@@ -11,7 +11,8 @@ body{
     height: 100vh;
     background-color: #ffffff;
     background-image: url('backgroundimage.jpg');
-    background-size:100%;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .card-content{
