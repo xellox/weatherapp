@@ -94,10 +94,16 @@ button:hover{
     #searchinput{
         width:160px;
     }
+    body{
+        background-image: url('backgroundimage.jpg');
+    }
 }
 
 @media (min-width:350px) and (max-width:600px) {
     #searchinput{
         width:220px;
+    }
+    body{
+        background-image: url('backgroundimage.jpg');
     }
 }
