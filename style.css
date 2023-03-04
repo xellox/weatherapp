@@ -9,21 +9,23 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #070707;
-
+    background-color: #ffffff;
+    background-image: url('backgroundimage.jpg');
+    background-size:100%;
 }
 
 .card-content{
-    border:1px solid rgb(75, 75, 75);
+    border:1px solid rgba(75, 75, 75, 0);
+    opacity: 0.90;
     padding: 2em;
     font-size: 25px;
-    background-color: #1f1f1f;
+    background-color: #131313;
     border-radius: 10px;
     box-shadow: 10px 10px 20px 0 black;
+    text-transform: capitalize;
 }
 .searchbar{
     margin-bottom: 20px;
-
 }
 
 #searchinput{
@@ -31,10 +33,10 @@ body{
     width:300px;
     font-size: 26px;
     border-radius: 22px;
-    padding: 7px;
+    padding:7px;
     outline:none;
     border:none;
-    background-color: rgba(14, 14, 14, 0.545);
+    background-color: rgba(5, 5, 5, 0.888);
     color:white;
 }
 
@@ -43,7 +45,7 @@ button{
     width: 46px;
     border:none;
     border-radius: 50%;
-    background-color: rgba(14, 14, 14, 0.545);
+    background-color: rgba(5, 5, 5, 0.886);
     margin-left: 5px;
     color:white;
     align-items: center;
@@ -52,11 +54,29 @@ button{
 }
 
 button:hover{
-    background-color: rgba(14, 14, 14, 0.36);
+    background-color: rgba(5, 5, 5, 0.688);
 }
 
 
 
 .information-display{
     color:White;
+}
+
+.flex{
+    display:inline-flex;
+    align-items: center;
+    margin:5px 0 20px 0;
+}
+
+.subdesc{
+    font-size:17px;
+}
+
+.degrees{
+    font-size:30px;
+}
+
+.cityname{
+    font-size: 25px;
 }
