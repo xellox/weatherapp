@@ -1,5 +1,8 @@
 // API URL https://api.openweathermap.org/data/2.5/weather?q=Oradea&units=metric&appid=73ca880f94b5f59ea0326ae3995abf02 //
 // API KEY 73ca880f94b5f59ea0326ae3995abf02 //
+document.cookie = "witcher=Geralt; SameSite=None; Secure"
+
+
 let weather = {
     apiKey: '73ca880f94b5f59ea0326ae3995abf02',
     fetchWeather: function(city){
@@ -29,6 +32,7 @@ let weather = {
     search: function () {
         this.fetchWeather(document.querySelector("#searchinput").value);
         document.querySelector("#searchinput").value = ''
+        document.cookie = "witcher=Geralt; SameSite=None; Secure"      
       },
                                                                
 }
@@ -42,3 +46,4 @@ document.querySelector("#searchinput").addEventListener("keypress", function (e)
       weather.search();
     }
   });
+
