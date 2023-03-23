@@ -26,13 +26,12 @@ let weather = {
         document.querySelector('.icon').src = "http://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector('.description').innerText = description;
         document.querySelector('.degrees').innerText = Math.round(temp) + ' C°'
-        document.querySelector('.wind').innerText = 'wind speed: ' + Math.round(speed) + ' km/h';
+        document.querySelector('.wind').innerText = 'wind speed: ' + Math.round((speed*3600)/1000) + ' km/h';
         document.querySelector('.humidity').innerText = 'humidity: ' + humidity + '%';
     },
     search: function () {
         this.fetchWeather(document.querySelector("#searchinput").value);
-        document.querySelector("#searchinput").value = ''
-        document.cookie = "witcher=Geralt; SameSite=None; Secure"      
+        document.querySelector("#searchinput").value = ''    
       },
                                                                
 }
@@ -46,4 +45,3 @@ document.querySelector("#searchinput").addEventListener("keypress", function (e)
       weather.search();
     }
   });
-
