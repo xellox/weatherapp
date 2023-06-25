@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App KD</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="hacker.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Neon&display=swap" rel="stylesheet"> 
-</head>
-<body>
-    <div class="card-content">
-        <div class="searchbar">
-            <input id="searchinput" type="text" placeholder="Location">
-            <button id="button"><svg stroke="currentColor" fill="currentColor" stroke-width="20" viewBox="0 0 1024 1024" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></button>
-        </div>
-        <div class="information-display">
-            <div class="cityname"></div>
-        <div class="flex">
-            <div class="degrees"></div>
-            <img src="" class="icon"></img>
-        </div>
-        <div class="subdesc">
-            <div class="description"></div>
-            <div class="wind"></div>
-            <div class="humidity"></div>
-        </div>
-        </div>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins&family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <section class="navbar">
+    <div class="navbar-container">
+            <h1 class="logo">WeatherLogo</h1>
+            <div class="searchbar">
+                <div class="search-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"></path></svg></div>
+                <input class ="searchbar-input" placeholder="Find your location" type="text" class="searchbar" /> 
+            </div>
+            <div class="settings-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></div>
     </div>
-<script src="java.js"></script>
-</body>
+    </section>
+
+    <section class="weather">
+        <div class="weather-display">
+            <div class="bg"></div>
+            <div class="weather-container">
+                <div class="grid-weather">
+                    <div class="current-day">
+                        <div class="date">
+                            <span class="day">Monday</span>
+                            <span class="day-date">6 Oct</span>
+                        </div>
+                        <div class="city">Oradea</div>
+                        <div class="temperature">
+                            <span class="temp">24C</span>
+                            <div class="icon-temp">x</div>
+                        </div>
+                        <div class="description">
+                            <span class="rain">20%</span>
+                            <span class="wind">18 km/h</span>
+                        </div>
+
+                    </div>
+                    <div class="next-days">
+                        <span class="next-day">Tuesday</span>
+                        <div class="next-icon-temp">x</div>
+                        <div class="next-description">
+                            <span class="next-temp">33C</span>
+                            <span class="next-desc">Sunny</span>
+                        </div>
+                    </div>
+                    <div class="next-days">
+                        <span class="next-day">Wndsday</span>
+                    </div>
+                    <div class="next-days">
+                        <span class="next-day">Thursday</span>
+                    </div>
+                    <div class="next-days"></div>
+                    <div class="next-days"></div>
+                    <div class="next-days"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>

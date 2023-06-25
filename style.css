@@ -1,125 +1,146 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
 }
 
-body{
+body {
+  background-color: black;
+}
+
+.navbar-container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px 20px 50px;
+  background-color: rgb(10, 10, 10);
+  color:white;
+  gap: 50px;
+}
+
+.settings-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.searchbar {
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 10px;
+}
+.searchbar-input {
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  color: white;
+}
+
+.search-icon {
+  display: flex;
+  color: white;
+}
+
+.weather-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  background-image: url("bg3.jpg");
+  background-size: cover;
+  height: 350px;
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
+.weather-container {
+  max-width: 1000px;
+  min-width: 300px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  top: -150px;
+  padding: 20px;
+  border-radius: 5px
+}
+.grid-weather {
+  display: grid;
+  grid-template-columns: 1fr repeat(6, 1fr);
+  color:rgb(201, 201, 201);
+}
+
+.current-day {
+  background-color: rgb(30, 30, 30);
+  width: 300px;
+  height: 200px;
+}
+
+.city,
+.temperature,
+.description {
+  padding: 10px;
+}
+.date {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: rgb(20, 20, 20);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.temperature {
+  display: flex;
+  font-size: 40px;
+  gap: 15px;
+  font-weight: 1200;
+}
+
+.next-days {
+  background-color: rgb(20, 20, 20);
+  height: 200px;
+}
+.next-days:nth-child(odd){
+    background-color: rgb(30, 30, 30);
+}
+
+.next-day{
+  display:flex;
+  padding:8px;
+  background-color: rgba(10, 10, 10, 0.5);
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.next-icon-temp{
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #ffffff;
-    background-image: url('rocks.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
+    margin-top:20px;
+    font-size:35px;
 }
-
-.card-content{
-    padding: 2em;
-    font-size: 25px;
-    background-color: #000000e8;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px 0 black;
-    text-transform: capitalize;
-}
-
-.searchbar{
-    margin-bottom: 20px;
-    justify-content: center;
-    align-items: center;
+.next-description{
     display:flex;
-}
-
-#searchinput{
-    height: 43px;   
-    width: 300px;
-    font-size: 22px;
-    border-radius: 22px;
-    padding:7px;
-    margin-left:-7px;
-    outline:none;
-    border:none;
-    background-color: rgba(5, 5, 5, 0.888);
-    color:white;
-    font-family: Poppins;
-}
-
-button{
-    height: 46px;
-    width: 46px;
-    border:none;
-    border-radius: 50%;
-    background-color: rgba(5, 5, 5, 0.888);
-    margin-left: 5px;
-    color:white;
-    align-items: center;
     justify-content: center;
-    display:inline-flex;
-
-}
-
-button:hover{
-    background-color: rgba(81, 81, 81, 0.814);
-}
-
-.information-display{
-    color:white;
-    font-family: tilt neon;
-}
-
-.flex{
-    display:inline-flex;
     align-items: center;
-    margin:5px 0 20px 0;
+    margin-top:10px;
+    gap:5px;
+    flex-direction: column;
 }
 
-.subdesc{
-    font-size:17px;
-}
-
-.degrees{
-    font-size:30px;
-}
-
-.cityname{
-    font-size: 25px;
-}
-
-@media (max-width:350px) {
-    #searchinput{
-        width:140px;
-        background-color: rgb(14, 14, 14);
-    }
-
-    .card-content{
-        max-width:280px;
-    }
-
-    body{
-        background-image: url('beach.jpg');
-    }
-
-    button{
-        background-color: rgb(14, 14, 14) 
-    }
-
-
-}
-
-@media (min-width:350px) and (max-width:600px) {
-    #searchinput{
-        width:180px;
-        background-color: rgb(14, 14, 14);
-    }
-    
-    button{
-        background-color: rgb(14, 14, 14) 
-    }
-    .card-content{
-        max-width:330px;
-    }
-    body{
-        background-image: url('beach.jpg');
-    }
+.next-desc{
+    gap:5px;
+    font-size:12px;
 }
