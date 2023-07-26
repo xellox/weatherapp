@@ -55,6 +55,7 @@ html,body{
   display: flex;
   color: white;
   font-size: clamp(0.75rem, 0.6923rem + 0.3077vw, 1rem);
+  cursor: pointer;
 }
 
 .weather-display {
@@ -64,7 +65,7 @@ html,body{
   align-items: center;
 }
 .bg {
-  background-image: url("bg.jpg");
+  background-image: url("./images/bg.jpg");
   background-size: cover;
   height: 350px;
   width: 100vw;

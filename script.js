@@ -1,5 +1,6 @@
 let searchbar = document.querySelector(".searchbar-input")
 let gridWeather = document.querySelector(".grid-weather")
+let searchicon = document.querySelector(".search-icon")
 async function fetchData(type){
 
     let APIkey = '73ca880f94b5f59ea0326ae3995abf02';
@@ -81,3 +82,9 @@ searchbar.addEventListener("keypress", (e) => {
       fetchData("hourly");
     }
   });
+
+searchicon.addEventListener("click", () => {
+  if ((searchbar.value != "")) {
+    fetchData("hourly");
+  }
+})
